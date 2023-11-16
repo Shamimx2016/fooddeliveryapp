@@ -36,7 +36,6 @@ class _DetailsState extends State<Details> {
               height: 15,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,6 +50,7 @@ class _DetailsState extends State<Details> {
                     ),
                   ],
                 ),
+                Spacer(),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
@@ -61,9 +61,15 @@ class _DetailsState extends State<Details> {
                     color: Colors.white,
                   ),
                 ),
+                const SizedBox(
+                  width: 10,
+                ),
                 Text(
                   '1',
                   style: AppWidget.semiboldTextFeildStyle(),
+                ),
+                const SizedBox(
+                  width: 10,
                 ),
                 Container(
                   decoration: BoxDecoration(
