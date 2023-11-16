@@ -51,7 +51,7 @@ class _DetailsState extends State<Details> {
                     ),
                   ],
                 ),
-                Spacer(),
+               const Spacer(),
                 GestureDetector(
                   onTap: () {
                     if (a > 1) --a;
@@ -96,6 +96,14 @@ class _DetailsState extends State<Details> {
                 ),
               ],
             ),
+          const  SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
+              style: AppWidget.lightTextFeildStyle(),
+              maxLines: 3,
+            )
           ],
         ),
       ),
