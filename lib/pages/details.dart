@@ -9,6 +9,7 @@ class Details extends StatefulWidget {
 }
 
 class _DetailsState extends State<Details> {
+  int a = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,34 +52,46 @@ class _DetailsState extends State<Details> {
                   ],
                 ),
                 Spacer(),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.black,
-                  ),
-                  child: const Icon(
-                    Icons.remove,
-                    color: Colors.white,
+                GestureDetector(
+                  onTap: () {
+                    if (a > 1) --a;
+                    setState(() {});
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.black,
+                    ),
+                    child: const Icon(
+                      Icons.remove,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 const SizedBox(
                   width: 20,
                 ),
                 Text(
-                  '1',
+                  a.toString(),
                   style: AppWidget.semiboldTextFeildStyle(),
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.black,
-                  ),
-                  child: const Icon(
-                    Icons.add,
-                    color: Colors.white,
+                GestureDetector(
+                  onTap: () {
+                    ++a;
+                    setState(() {});
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.black,
+                    ),
+                    child: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
