@@ -62,14 +62,14 @@ class _DetailsState extends State<Details> {
                   ),
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 20,
                 ),
                 Text(
                   '1',
                   style: AppWidget.semiboldTextFeildStyle(),
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 20,
                 ),
                 Container(
                   decoration: BoxDecoration(
