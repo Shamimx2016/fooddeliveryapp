@@ -136,7 +136,7 @@ class _HomeState extends State<Home> {
                               height: 5,
                             ),
                             Text(
-                              '\$25',
+                              '\$28',
                               style: AppWidget.semiboldTextFeildStyle(),
                             ),
                           ],
@@ -145,6 +145,71 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+              margin: const EdgeInsets.only(right: 20),
+              child: Material(
+                elevation: 5,
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/images/salad2.png',
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width / 2,
+                        child: Column(
+                          children: [
+                            Text(
+                              'Mediterranean Chickpea salad',
+                              style: AppWidget.semiboldTextFeildStyle(),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Honey foot cheese',
+                                    style: AppWidget.lightTextFeildStyle(),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '\$28',
+                                    style: AppWidget.semiboldTextFeildStyle(),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
