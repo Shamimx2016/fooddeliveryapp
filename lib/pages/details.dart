@@ -51,7 +51,7 @@ class _DetailsState extends State<Details> {
                     ),
                   ],
                 ),
-               const Spacer(),
+                const Spacer(),
                 GestureDetector(
                   onTap: () {
                     if (a > 1) --a;
@@ -96,14 +96,97 @@ class _DetailsState extends State<Details> {
                 ),
               ],
             ),
-          const  SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
               style: AppWidget.lightTextFeildStyle(),
               maxLines: 3,
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Text(
+                  'Delivery Time',
+                  style: AppWidget.semiboldTextFeildStyle(),
+                ),
+                const SizedBox(
+                  width: 25,
+                ),
+                const Icon(
+                  Icons.alarm,
+                  color: Colors.black54,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  '30 min',
+                  style: AppWidget.semiboldTextFeildStyle(),
+                ),
+              ],
+            ),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Total Price',
+                        style: AppWidget.semiboldTextFeildStyle(),
+                      ),
+                      Text(
+                        '\$25',
+                        style: AppWidget.headlineTextFeildStyle(),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width / 2,
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        const Text(
+                          'Add to Cart',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 30,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(3),
+                          decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: const Icon(
+                            Icons.shopping_bag_outlined,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
